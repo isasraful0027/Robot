@@ -1,0 +1,153 @@
+:root{
+    --bg-color: #000;
+    --primari-color: #612cff;
+    --secoundary-color: #ff6b45;
+    --thrd-color: #d800d2;
+    --text-color: #fff;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.5;
+}
+
+a{
+    color: var(--text-color);
+}
+
+body{
+    padding-right: 150px;
+    min-height: 100vh;
+    background: url(Login-Bg.jpg);
+    color: var(--text-color);
+    justify-content: center;
+    align-items: end;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* .border{
+    padding: 10px;
+    width: 420px;
+    position: fixed;
+    border-radius: 50px;
+    background-color: var(--bg-color );
+    background: linear-gradient(to right,#ff6b45, #612cff, #d800d2, #ff6b45);
+    background-size: 200%;
+    animation: Gradient 2.5s linear infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes Gradient {
+    to{
+        background-position: 200%;
+    }
+} */
+
+.wrapper{
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--primari-color);
+    box-shadow: 0 0px 10px var(--primari-color);
+    background-color: transparent;
+    width: 420px;
+    color: var(--text-color);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px #612cff4c;
+    border-radius: 40px;
+    font-size: 16px;
+    color: var(--text-color);
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+color: var(--text-color);
+}
+
+.input-box i {
+position: absolute;
+right: 20px;
+top: 50%;
+transform: translateY(-50%) ;
+font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+display: flex;
+justify-content: space-between;
+font-size: 14.5px;
+margin: - 15px 0 15px;
+}
+.remember-forgot label input {
+accent-color:#fff;
+margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: var(--text-color);
+}
+.remember-forgot a:hover{
+    color: var(--primari-color);
+}
+
+.wrapper .btn {
+    margin: 10px;
+width: 100%;
+height: 45px;
+background: transparent;
+border: 1px solid var(--primari-color);
+outline: none;
+border-radius: 40px;
+box-shadow: 0 0 10px var(--primari-color);
+cursor: pointer;
+font-size: 16px;
+color:#333;
+font-weight: 600;
+}
+
+.wrapper .btn:hover{
+    box-shadow: 0 0 10px var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+.wrapper .register-link{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px 0px 15px;
+}
+
+.register-link a{
+    color: var(--text-color);
+}
+
+.register-link a:hover{
+    color: var(--primari-color);
+}

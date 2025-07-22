@@ -1,0 +1,80 @@
+:root{
+    --bg-color: #000;
+    --primari-color: #612cff;
+    --secoundary-color: #ff6b45;
+    --thrd-color: #d800d2;
+    --text-color: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.5;
+}
+
+body{
+    min-height: 100vh;
+    background: url(Broken-robot.jpg);
+    background-size: cover;
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.content{
+    background-color: #0000001e;
+    padding: 10px;
+    border: 1px solid #00000038;
+    border-radius: 10px;
+    box-shadow: 0 0px 2px var(--primari-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content:hover{
+    cursor: pointer;
+    border: 1px solid #d800d140;
+    border-radius: 10px;
+    box-shadow: 0 0px 2px var(--thrd-color);
+    backdrop-filter: blur(5px);
+}
+
+.content h2{
+    letter-spacing: 2px;
+    font-size: 6rem;
+}
+
+.content p{
+    color: rgb(205, 205, 205);
+    font-size: 1.5rem;
+}
+
+.content a{
+    margin: 20px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    background-color: var(--primari-color);
+    padding: 10px;
+    border: 2px solid var(--primari-color);
+    border-radius: 10px;
+}
+
+.content a:hover{
+    font-size: 1.1rem;
+    color: var(--primari-color);
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid var(--primari-color);
+    border-radius: 10px;
+    box-shadow: 2px 5px 30px var(--primari-color);
+}

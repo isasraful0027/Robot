@@ -1,0 +1,406 @@
+        
+/* .font{
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+:root{
+    --bg-color: #000;
+    --primari-color: #612cff;
+    --secoundary-color: #ff6b45;
+    --thrd-color: #d800d2;
+    --text-color: #fff;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Pixelify Sans", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    line-height: 1.5;
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;            
+    box-sizing: border-box;
+}
+
+header{
+    background-color: var(--bg-color);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    box-shadow: 0px 0px 5px #ffffff85;
+    transition: all 0.5s ease;
+    z-index: 1000;
+}
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo > i{
+    color: var(--primari-color);
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.logo > span{
+    color: var(--text-color);
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar  a{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+
+.navbar a:hover{
+    color: var(--primari-color);
+}
+
+.navbar .active-nav{
+    color: var(--primari-color);
+}
+
+.explore a{
+    font-size: 1.1rem;
+    color: var(--text-color);
+    background-color: var(--primari-color);
+    padding: 10px;
+    border: 2px solid var(--primari-color);
+    border-radius: 10px;
+}
+
+.explore a:hover{
+    font-size: 1.1rem;
+    color: var(--primari-color);
+    background-color: transparent;
+    padding: 10px;
+    border: 2px solid var(--primari-color);
+    border-radius: 10px;
+    box-shadow: 2px 5px 30px var(--primari-color);
+}
+
+ 
+ 
+ /* General Styling */
+
+
+        /* Main Contact Section */
+        .contact-section {
+            letter-spacing: 1px;
+            max-width: 1000px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-title {
+            font-size: 3em;
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .contact-description {
+            font-size: 1.1em;
+            color: gray;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Contact Content Grid */
+        .contact-content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Two columns */
+            gap: 40px;
+            background-color: #222; /* Slightly lighter dark background for the grid */
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid #333;
+        }
+
+        /* Left Column: Contact Info */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            text-align: left;
+            padding-right: 20px; /* Space from the form */
+            border-right: 1px solid #333; /* Separator line */
+            position: relative; /* For the accent line */
+        }
+
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -1px; /* Align with border */
+            width: 2px;
+            height: 80px; /* Length of the accent line */
+            background-color: var(--primari-color); /* Green accent */
+            transform: translateY(-50%); /* Adjust position */
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .info-icon {
+            font-size: 1.8em;
+            color: var(--text-color); /* Green accent for icons */
+            border: 1px solid var(--primari-color);
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px var(--primari-color);
+        }
+
+        .info-details h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #f0f0f0;
+            font-weight: 600;
+        }
+
+        .info-details p {
+            margin: 5px 0 0 0;
+            font-size: 0.95em;
+            color: #bbb;
+        }
+
+        /* Connect With Us */
+        .connect-with-us {
+            margin-top: 40px;
+            text-align: left;
+            position: relative;
+            padding-top: 20px; /* Space for the accent line */
+        }
+
+        .connect-with-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 80px; /* Length of the accent line */
+            height: 2px;
+            background-color: var(--primari-color); /* Green accent */
+        }
+
+        .connect-with-us h3 {
+            font-size: 1.2em;
+            color: var(--primari-color); /* Green accent */
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-icons a {
+            color: #f0f0f0;
+            font-size: 1.8em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--secoundary-color); /* Green on hover */
+            transform: translateY(-3px);
+        }
+
+        /* Right Column: Send Message Form */
+        .send-message-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            padding-left: 20px; /* Space from the info column */
+            position: relative; /* For the accent line */
+        }
+
+        .send-message-form::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -1px; /* Align with border */
+            width: 2px;
+            height: 80px; /* Length of the accent line */
+            background-color: var(--primari-color); /* Green accent */
+            transform: translateY(-50%); /* Adjust position */
+        }
+
+        .form-title {
+            letter-spacing: 1px;
+            font-size: 2em;
+            color: #f0f0f0;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px; /* Space between form groups */
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 0;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #555; /* Light grey underline */
+            color: #f0f0f0;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-bottom-color: var(--primari-color); /* Green on focus */
+        }
+
+        .form-group label {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            color: #bbb;
+            font-size: 1em;
+            pointer-events: none;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus + label,
+        .form-group input:not(:placeholder-shown) + label,
+        .form-group textarea:focus + label,
+        .form-group textarea:not(:placeholder-shown) + label {
+            top: -15px;
+            font-size: 0.8em;
+            color: var(--primari-color); /* Green when active/filled */
+        }
+
+        .form-group textarea {
+            resize: vertical; /* Allow vertical resizing */
+            min-height: 80px;
+        }
+
+        .submit-button {
+            background-color: var(--primari-color); /* Green accent */
+            color: var(--text-color); /* Dark text on green button */
+            border: 2px solid var(--primari-color);
+            padding: 12px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 400;
+            letter-spacing: 1px;
+            align-self: flex-start; /* Align to left */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px var(--primari-color);
+        }
+
+        .submit-button:hover {
+            border: 2px solid var(--text-color);
+            background-color: var(--bg-color); /* Darker green on hover */
+            box-shadow: 0 6px 15px var(--text-color);
+        }
+
+ /*footer */
+footer{
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer a{
+    color: var(--primari-color);
+}
+footer a:hover{
+    color: var(--secoundary-color);
+}
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2.2em;
+            }
+
+            .contact-description {
+                font-size: 1em;
+            }
+
+            .contact-content-grid {
+                grid-template-columns: 1fr; /* Single column on smaller screens */
+                padding: 30px 20px;
+            }
+
+            .contact-info {
+                border-right: none; /* Remove vertical border */
+                padding-right: 0;
+                border-bottom: 1px solid #333; /* Add horizontal border */
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+            }
+
+            .contact-info::before {
+                display: none; /* Hide vertical accent line */
+            }
+
+            .connect-with-us {
+                margin-top: 30px;
+                padding-top: 0; /* Remove top padding */
+            }
+
+            .connect-with-us::before {
+                display: none; /* Hide horizontal accent line */
+            }
+
+            .send-message-form {
+                padding-left: 0;
+            }
+
+            .send-message-form::before {
+                display: none; /* Hide vertical accent line */
+            }
+        }
